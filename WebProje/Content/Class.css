@@ -1,0 +1,42 @@
+﻿body {
+}
+.Button-1:hover {
+    background-color: #CC3300;
+    border: solid;
+    border-top-color: purple;
+    border-right-color: grey;
+    border-left-color: orangered;
+    border-bottom-color: darkblue;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.Button-2:hover {
+    background-color: #9900FF;
+    border: solid;
+    border-top-color: purple;
+    border-right-color: grey;
+    border-left-color: orangered;
+    border-bottom-color: darkblue;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.Button-3:hover {
+    background-color: #66FF33;
+    border: solid;
+    border-top-color: purple;
+    border-right-color: grey;
+    border-left-color: orangered;
+    border-bottom-color: darkblue;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.Button-4:hover {
+    background-color: #3333FF;
+    border: solid;
+    border-top-color: purple;
+    border-right-color: grey;
+    border-left-color: orangered;
+    border-bottom-color: darkblue;
+    margin-right: 10px;
+    margin-left: 10px;
+}

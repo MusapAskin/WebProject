@@ -1,0 +1,188 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebProje.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %></title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <style type="text/css">
+        .auto-style1 {
+            text-align: left;
+            width: 215px;
+            height: 1px;
+            margin-bottom: 0px;
+        }
+
+        .auto-style2 {
+            text-align: left;
+            width: 190px;
+        }
+
+        .auto-style4 {
+            color: #CC3300;
+        }
+
+        .auto-style5 {
+            color: #FF3300;
+        }
+
+        .auto-style6 {
+            height: 256px;
+        }
+
+        .auto-style7 {
+            margin-left: 123px;
+        }
+
+        .social-media {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            background: #000000;
+            color: #242424;
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            margin: 1em;
+            border-radius: 15%;
+            transition: all .4s;
+        }
+
+            .social-media::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #c32aa3;
+                border-radius: 15%;
+                transform: scale(1.1);
+                z-index: -1;
+                transition: all .4s;
+            }
+
+            .social-media:nth-child(3)::before {
+                background: #25d366;
+            }
+
+            .social-media:nth-child(4)::before {
+                background: #1da1f2;
+            }
+
+            .social-media:nth-child(5)::before {
+                background: #7289da;
+            }
+
+            .social-media:hover::before {
+                transform: translateY(10px) scaleX(0.6) scaleY(0.8);
+                filter: blur(10px);
+            }
+
+            .social-media:hover:nth-child(1) {
+                color: #c32aa3;
+                text-shadow: 0 0 30px #c32aa3;
+            }
+
+            .social-media:hover:nth-child(2) {
+                color: #25d366;
+                text-shadow: 0 0 30px #25d366;
+            }
+
+            .social-media:hover:nth-child(3) {
+                color: #1da1f2;
+                text-shadow: 0 0 30px #1da1f2;
+            }
+    </style>
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">Bir Bilgisayar Mühendisinin El Kitabı</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/sites">Öğretici Siteler</a></li>
+                        <li><a runat="server" href="~/Class">Dersler</a></li>
+                        <li><a runat="server" href="~/About">Yapılış Amacı</a></li>
+
+                    </ul>
+                    <asp:Image ID="Image6" runat="server" ImageUrl="~/Content/İmage/login.png" CssClass="auto-style7" Height="40px" Width="40px" /><a runat="server" href="~/Login">Giriş</a>
+
+                    <asp:Image ID="Image5" runat="server" ImageUrl="~/Content/İmage/register.png" Height="40px" Width="40px" /><a runat="server" href="~/CreateAccount">Kaydol</a>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer class="text-center">
+                <hr />
+                <div class="auto-style6">
+                    <h4 class="auto-style2">İletişim Bilgilerim</h4>
+                    <address class="auto-style1">
+                        İstanbul, Türkiye 
+                        Mus'ap Aşkın<br />
+                        <abbr title="Phone">Telefon:</abbr>
+                        0(531) 836 85 20
+                        <a href="mailto:1722120017@iesu.edu.tr">
+                            <asp:Image ID="Image4" runat="server" ImageUrl="~/Content/İmage/gmail.png" Height="40px" Width="40px" /></a><span class="auto-style4">
+                                <a href="mailto:1722120017@iesu.edu.tr" class="auto-style5">E-Mail Yolla</a></span><br />
+                    </address>
+                    <h4>Social Media</h4>
+                    <a class="social-media" href="https://www.linkedin.com/in/m-01101000-01100001-01110010-01100101-01111010-01101101-01101001/" target="_blank">
+                        <asp:Image ID="Image3" runat="server" ImageUrl="~/Content/İmage/linkedin.png" Height="1.5em" Width="1.4em" BackColor="Black" ImageAlign="Middle"></asp:Image></a>
+
+                    <a class="social-media" href="https://github.com/MusapAskin" target="_blank">
+                        <asp:Image ID="Image2" runat="server" ImageUrl="~/Content/İmage/github-sign.png" Height="1.5em" Width="1.5em" BackColor="White" ImageAlign="Middle"></asp:Image></a>
+
+                    <a class="social-media" href="https://www.instagram.com/padawanm_/?hl=tr" target="_blank">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Content/İmage/instagram.png" Height="1.5em" Width="1.5em" ImageAlign="Middle"></asp:Image></a>
+                    <br />
+                    <br />
+                    <p style="text-align: center">&copy; <%: DateTime.Now.Year %> - My ASP.NET Application For My Web Project</p>
+                </div>
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
